@@ -10,7 +10,7 @@ pvOutputThreshold = 1e-8; ## set p value threshold of results to save
 errorCovariance = numeric();
 
 ## specify filenames and paths
-covariates_file_name = "US.txt"; 
+covariates_file_name = "Covariates/US.txt"; 
 SNP_file_name = paste("US_Genotypes_Imputed_Chr", chr, ".txt", sep = "")
 expression_file_name<-"US_Methylation.txt"
 output_file_name = paste("Output/US_chr", chr, ".txt", sep = "")
