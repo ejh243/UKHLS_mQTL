@@ -51,5 +51,17 @@ smr_Linux --bfile data_filtered_ForSMR --gwas-summary <GWAS file> --beqtl-summar
 ```
 
 10. collateSMRResultsAll.r
-Collates output of SMR analysis and apply significance filters (Supplementary Table 5). Performs enrichment of location of associated DNAm sites in gens, regulatory features. Collates results of SMR analysis with blood eQTLs (using Westera et al data) and identifies overlap (Supplementary Table 6). 
+Collates output of SMR analysis and apply significance filters (Supplementary Table 5). Performs enrichment of location of associated DNAm sites in genes and regulatory features. Collates results of SMR analysis with blood eQTLs (using Westera et al data) and identifies overlap (Supplementary Table 6). 
 
+11. reformatMQTLasGWAS.r
+Takes all DNAm sites associated with at least one QTL and creates a file containing the results for each significant variant for use with SMR program. Also creates a bash script for each chromosome to perform SMR against eQTL results.
+
+To perform SMR analysis of DNA methylation sites against gene expression run the bash script for each chromosome as follows
+
+``{bash}
+# E.g. for chromosome 1
+sh Run_mQTL_eQTL_chr1.sh
+```
+
+12. collateSMROutputMqtlEqtl.r
+Collates output from SMR analysis of DNA methylation agianst gene expression and apply significance filters (Supplementary Table 7). Performs enrichment of location of associated DNAm sites in genes and regulatory features.
